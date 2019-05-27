@@ -1,0 +1,23 @@
+C:\Users\Ciaran\Desktop\GTA RP Server\c# source\player\Ergo.Ticket_CaseFixer\Ergo.Ticket_CaseFixer\bin\Debug\Ergo.Ticket_CaseFixer.exe.config
+C:\Users\Ciaran\Desktop\GTA RP Server\c# source\player\Ergo.Ticket_CaseFixer\Ergo.Ticket_CaseFixer\bin\Debug\Ergo.Ticket_CaseFixer.exe
+C:\Users\Ciaran\Desktop\GTA RP Server\c# source\player\Ergo.Ticket_CaseFixer\Ergo.Ticket_CaseFixer\bin\Debug\Ergo.Ticket_CaseFixer.pdb
+C:\Users\Ciaran\Desktop\GTA RP Server\c# source\player\Ergo.Ticket_CaseFixer\Ergo.Ticket_CaseFixer\obj\Debug\Ergo.Ticket_CaseFixer.csprojResolveAssemblyReference.cache
+C:\Users\Ciaran\Desktop\GTA RP Server\c# source\player\Ergo.Ticket_CaseFixer\Ergo.Ticket_CaseFixer\obj\Debug\Ergo.Ticket_CaseFixer.ADConnect.resources
+C:\Users\Ciaran\Desktop\GTA RP Server\c# source\player\Ergo.Ticket_CaseFixer\Ergo.Ticket_CaseFixer\obj\Debug\Ergo.Ticket_CaseFixer.Form1.resources
+C:\Users\Ciaran\Desktop\GTA RP Server\c# source\player\Ergo.Ticket_CaseFixer\Ergo.Ticket_CaseFixer\obj\Debug\Ergo.Ticket_CaseFixer.Properties.Resources.resources
+C:\Users\Ciaran\Desktop\GTA RP Server\c# source\player\Ergo.Ticket_CaseFixer\Ergo.Ticket_CaseFixer\obj\Debug\Ergo.Ticket_CaseFixer.csproj.GenerateResource.Cache
+C:\Users\Ciaran\Desktop\GTA RP Server\c# source\player\Ergo.Ticket_CaseFixer\Ergo.Ticket_CaseFixer\obj\Debug\Ergo.Ticket_CaseFixer.exe
+C:\Users\Ciaran\Desktop\GTA RP Server\c# source\player\Ergo.Ticket_CaseFixer\Ergo.Ticket_CaseFixer\obj\Debug\Ergo.Ticket_CaseFixer.pdb
+C:\Users\Ciaran\Desktop\GTA RP Server\c# source\player\Ergo.Ticket_CaseFixer\Ergo.Ticket_CaseFixer\bin\Debug\Microsoft.Xrm.Sdk.dll
+C:\Users\Ciaran\Desktop\GTA RP Server\c# source\player\Ergo.Ticket_CaseFixer\Ergo.Ticket_CaseFixer\bin\Debug\Microsoft.Xrm.Sdk.xml
+D:\work\Ergo.Ticket_CaseFixer\Ergo.Ticket_CaseFixer\bin\Debug\Ergo.Ticket_CaseFixer.exe.config
+D:\work\Ergo.Ticket_CaseFixer\Ergo.Ticket_CaseFixer\obj\Debug\Ergo.Ticket_CaseFixer.exe
+D:\work\Ergo.Ticket_CaseFixer\Ergo.Ticket_CaseFixer\obj\Debug\Ergo.Ticket_CaseFixer.pdb
+D:\work\Ergo.Ticket_CaseFixer\Ergo.Ticket_CaseFixer\obj\Debug\Ergo.Ticket_CaseFixer.csprojResolveAssemblyReference.cache
+D:\work\Ergo.Ticket_CaseFixer\Ergo.Ticket_CaseFixer\obj\Debug\Ergo.Ticket_CaseFixer.ADConnect.resources
+D:\work\Ergo.Ticket_CaseFixer\Ergo.Ticket_CaseFixer\obj\Debug\Ergo.Ticket_CaseFixer.Form1.resources
+D:\work\Ergo.Ticket_CaseFixer\Ergo.Ticket_CaseFixer\obj\Debug\Ergo.Ticket_CaseFixer.Properties.Resources.resources
+D:\work\Ergo.Ticket_CaseFixer\Ergo.Ticket_CaseFixer\obj\Debug\Ergo.Ticket_CaseFixer.csproj.GenerateResource.Cache
+D:\work\Ergo.Ticket_CaseFixer\Ergo.Ticket_CaseFixer\bin\Debug\Ergo.Ticket_CaseFixer.exe
+D:\work\Ergo.Ticket_CaseFixer\Ergo.Ticket_CaseFixer\bin\Debug\Ergo.Ticket_CaseFixer.pdb
+D:\work\Ergo.Ticket_CaseFixer\Ergo.Ticket_CaseFixer\bin\Debug\Microsoft.Xrm.Sdk.xml
