@@ -1,7 +1,9 @@
 ﻿using Ergo.Ticket_CaseFixer.Models;
 using Ergo.Ticket_CaseFixer.Services;
+using Microsoft.Crm.Sdk.Messages;
 using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Sdk.Client;
+using Microsoft.Xrm.Sdk.Messages;
 using Microsoft.Xrm.Sdk.Query;
 using System;
 using System.Collections.Generic;
@@ -21,6 +23,7 @@ namespace Ergo.Ticket_CaseFixer
         static int trace = 0;
         public static bool OrgServiceRetreived = false;
         CRMService crmService = new CRMService();
+        EntityCollection returned_cases;
 
         public Form1()
         {
@@ -40,12 +43,12 @@ namespace Ergo.Ticket_CaseFixer
                     Guid contractId = new Guid(textBox2.Text);
 
                     QueryExpression query = new QueryExpression("incident");
-                    query.ColumnSet = new ColumnSet("incidentid", "ergo_contractid", "ergo_contractlineid", "ergo_contracttechnology", "ticketnumber", "statecode");
+                    query.ColumnSet = new ColumnSet("incidentid", "ergo_contractid", "ergo_contractlineid", "ergo_contracttechnology", "ticketnumber", "statecode", "statuscode");
                     // query.Criteria.AddCondition("statecode", ConditionOperator.Equal, "0");
                     query.Criteria.AddCondition("ergo_contractid", ConditionOperator.Equal, contractId);
 
                     EntityCollection brokenCases = _orgService.RetrieveMultiple(query);
-
+                    returned_cases = brokenCases;
                     List<Case> ReturnedCases = new List<Case>();
                     foreach (var _case in brokenCases.Entities)
                     {
@@ -98,22 +101,72 @@ namespace Ergo.Ticket_CaseFixer
         {
             try
             {
+
                 List<Guid> CasesToFix = new List<Guid>();
 
                 //fix selected records
                 Int32 selectedCellCount = (dataGridView1.GetCellCount(DataGridViewElementStates.Selected)) / 7;
                 var message = MessageBox.Show(selectedCellCount.ToString() + " Records selected", "Selected Records", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                /*  foreach(var row in dataGridView1.SelectedCells)
-                  {
-                      CasesToFix.Add(new Guid(row.))
-                  }*/
                 for (var i = 0; i < selectedCellCount * 7; i += 7)
                 {
-                    MessageBox.Show(dataGridView1.SelectedCells[i + 6].Value.ToString(), "Selected Records", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    //MessageBox.Show(dataGridView1.SelectedCells[i + 6].Value.ToString(), "Selected Records", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     CasesToFix.Add(new Guid(dataGridView1.SelectedCells[i + 6].Value.ToString()));
+                }
+
+                foreach(var _case in CasesToFix)
+                {
+                    Entity target;
+                   
+                    foreach (var entity in returned_cases.Entities)
+                    {
+                        if (_case == entity.Id)
+                        {
+                            target = entity;
+                            var statusreason = entity.GetAttributeValue<OptionSetValue>("statuscode");
+                            var state = entity.GetAttributeValue<OptionSetValue>("statecode");
+                            Guid new_contract = new Guid(textBox1.Text);
+                            List<EntityReference> contractLines = GetNewContractLines(new_contract);
+                            foreach(var line in contractLines)
+                            {
+                                if (entity.GetAttributeValue<EntityReference>("ergo_contractlineid").Name.Equals(line.Name))
+                                {
+                                    entity["ergo_contractlineid"] = line;
+
+                                    List<EntityReference> technologies = GetNewTech(line.Id);
+                                    foreach (var tech in technologies)
+                                    {
+                                        if (entity.GetAttributeValue<EntityReference>("ergo_contracttechnology").Name.Equals(tech.Name))
+                                        {
+                                            entity["ergo_contracttechnology"] = tech;
+                                        }
+                                    }
+                                }
+                             
+                            }
+                            //status
+                            //status reason
+                            //owner
+                            EntityReference contract = entity.GetAttributeValue<EntityReference>("ergo_contractid");
+                            contract.Id = new Guid(textBox1.Text);
+                            entity["ergo_contractid"] = contract;
+                           // entity["statuscode"] = statusreason;
+
+                           
+                            //entity["statecode"] = state;
+
+                            _orgService.Update(entity);
+
+                            SetStateRequest request = new SetStateRequest();
+                            request.EntityMoniker = entity.ToEntityReference();
+                            request.State = state;
+                            request.Status = statusreason;
+                            _orgService.Execute(request);
 
 
+
+                            // _orgService.Update(entity);              
+                        }
+                    }
                 }
             }catch(Exception ex)
             {
@@ -193,6 +246,36 @@ namespace Ergo.Ticket_CaseFixer
                 }
             }
             return table;
+        }
+
+        public List<EntityReference> GetNewContractLines(Guid newContract)
+        {
+            List<EntityReference> tmp = new List<EntityReference>();
+
+            QueryExpression query = new QueryExpression("ergo_contractline");
+            query.Criteria.AddCondition("ergo_contractid", ConditionOperator.Equal, newContract);
+
+            var response = _orgService.RetrieveMultiple(query);
+            foreach(var line in response.Entities)
+            {
+                tmp.Add(line.ToEntityReference());
+            }
+            return tmp;
+        }
+
+        public List<EntityReference> GetNewTech(Guid line)
+        {
+            List<EntityReference> tmp = new List<EntityReference>();
+
+            QueryExpression query = new QueryExpression("ergo_contracttechnology");
+            query.Criteria.AddCondition("ergo_contractline", ConditionOperator.Equal, line);
+
+            var response = _orgService.RetrieveMultiple(query);
+            foreach (var tech in response.Entities)
+            {
+                tmp.Add(tech.ToEntityReference());
+            }
+            return tmp;
         }
     }
 }

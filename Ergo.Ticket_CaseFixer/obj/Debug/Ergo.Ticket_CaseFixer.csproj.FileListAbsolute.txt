@@ -21,3 +21,5 @@ D:\work\Ergo.Ticket_CaseFixer\Ergo.Ticket_CaseFixer\obj\Debug\Ergo.Ticket_CaseFi
 D:\work\Ergo.Ticket_CaseFixer\Ergo.Ticket_CaseFixer\bin\Debug\Ergo.Ticket_CaseFixer.exe
 D:\work\Ergo.Ticket_CaseFixer\Ergo.Ticket_CaseFixer\bin\Debug\Ergo.Ticket_CaseFixer.pdb
 D:\work\Ergo.Ticket_CaseFixer\Ergo.Ticket_CaseFixer\bin\Debug\Microsoft.Xrm.Sdk.xml
+D:\work\Ergo.Ticket_CaseFixer\Ergo.Ticket_CaseFixer\bin\Debug\Microsoft.Crm.Sdk.Proxy.dll
+D:\work\Ergo.Ticket_CaseFixer\Ergo.Ticket_CaseFixer\bin\Debug\Microsoft.Crm.Sdk.Proxy.xml

@@ -44,8 +44,8 @@ namespace Ergo.Ticket_CaseFixer
         public bool GetOrgService()
         {
             string crmurl = "https://crmuat.ergogroup.ie/PreProduction";
-            string crmuser = username; //";
-            string crmpass = password; //"";
+            string crmuser = username; 
+            string crmpass = password; 
             String apiuri = "/XRMServices/2011/Organization.svc";
 
             Uri organizationUrl = new Uri(crmurl + apiuri);
