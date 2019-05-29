@@ -44,7 +44,7 @@ namespace Ergo.Ticket_CaseFixer
 
                     QueryExpression query = new QueryExpression("incident");
                     query.ColumnSet = new ColumnSet("incidentid", "ergo_contractid", "ergo_contractlineid", "ergo_contracttechnology", "ticketnumber", "statecode", "statuscode");
-                    // query.Criteria.AddCondition("statecode", ConditionOperator.Equal, "0");
+                    query.Criteria.AddCondition("statuscode", ConditionOperator.In, 1,2, 951350002);
                     query.Criteria.AddCondition("ergo_contractid", ConditionOperator.Equal, contractId);
 
                     EntityCollection brokenCases = _orgService.RetrieveMultiple(query);

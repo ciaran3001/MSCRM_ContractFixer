@@ -23,3 +23,15 @@ D:\work\Ergo.Ticket_CaseFixer\Ergo.Ticket_CaseFixer\bin\Debug\Ergo.Ticket_CaseFi
 D:\work\Ergo.Ticket_CaseFixer\Ergo.Ticket_CaseFixer\bin\Debug\Microsoft.Xrm.Sdk.xml
 D:\work\Ergo.Ticket_CaseFixer\Ergo.Ticket_CaseFixer\bin\Debug\Microsoft.Crm.Sdk.Proxy.dll
 D:\work\Ergo.Ticket_CaseFixer\Ergo.Ticket_CaseFixer\bin\Debug\Microsoft.Crm.Sdk.Proxy.xml
+C:\Users\CKelly\Desktop\MSCRM_CaseFixer\Ergo.Ticket_CaseFixer\bin\Debug\Ergo.Ticket_CaseFixer.exe.config
+C:\Users\CKelly\Desktop\MSCRM_CaseFixer\Ergo.Ticket_CaseFixer\obj\Debug\Ergo.Ticket_CaseFixer.exe
+C:\Users\CKelly\Desktop\MSCRM_CaseFixer\Ergo.Ticket_CaseFixer\obj\Debug\Ergo.Ticket_CaseFixer.pdb
+C:\Users\CKelly\Desktop\MSCRM_CaseFixer\Ergo.Ticket_CaseFixer\bin\Debug\Ergo.Ticket_CaseFixer.exe
+C:\Users\CKelly\Desktop\MSCRM_CaseFixer\Ergo.Ticket_CaseFixer\bin\Debug\Ergo.Ticket_CaseFixer.pdb
+C:\Users\CKelly\Desktop\MSCRM_CaseFixer\Ergo.Ticket_CaseFixer\bin\Debug\Microsoft.Crm.Sdk.Proxy.xml
+C:\Users\CKelly\Desktop\MSCRM_CaseFixer\Ergo.Ticket_CaseFixer\bin\Debug\Microsoft.Xrm.Sdk.xml
+C:\Users\CKelly\Desktop\MSCRM_CaseFixer\Ergo.Ticket_CaseFixer\obj\Debug\Ergo.Ticket_CaseFixer.csprojResolveAssemblyReference.cache
+C:\Users\CKelly\Desktop\MSCRM_CaseFixer\Ergo.Ticket_CaseFixer\obj\Debug\Ergo.Ticket_CaseFixer.ADConnect.resources
+C:\Users\CKelly\Desktop\MSCRM_CaseFixer\Ergo.Ticket_CaseFixer\obj\Debug\Ergo.Ticket_CaseFixer.Form1.resources
+C:\Users\CKelly\Desktop\MSCRM_CaseFixer\Ergo.Ticket_CaseFixer\obj\Debug\Ergo.Ticket_CaseFixer.Properties.Resources.resources
+C:\Users\CKelly\Desktop\MSCRM_CaseFixer\Ergo.Ticket_CaseFixer\obj\Debug\Ergo.Ticket_CaseFixer.csproj.GenerateResource.Cache
